@@ -45,5 +45,11 @@ rspec:
 standard:
 	${DOCKER_COMPOSE_RUN} web standardrb
 
+standard_fix:
+	${DOCKER_COMPOSE_RUN} web standardrb --fix
+
 erblint:
 	${DOCKER_COMPOSE_RUN} web erblint --lint-all
+
+erblint_fix:
+	${DOCKER_COMPOSE_RUN} web erblint --lint-all -a
