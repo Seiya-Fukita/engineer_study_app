@@ -19,6 +19,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "rspec-rails"
   gem "standard", require: false
+  gem "erb_lint", require: false
 end
 
 group :development do
