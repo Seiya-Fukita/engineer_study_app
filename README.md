@@ -16,10 +16,16 @@ TailwindCSS
 
 ## 環境構築手順
 **1.Git Clone**  
-`git clone git@github.com:Seiya-Fukita/engineer_study_app.git`
+```
+git clone git@github.com:Seiya-Fukita/engineer_study_app.git
+````
 
 **2.ディレクトリ移動**  
-`cd enginner_study_app`
+```
+cd enginner_study_app
+```
 
 **3.setup**  
-`make setup`
+```
+make setup
+```
