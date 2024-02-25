@@ -1,25 +1,25 @@
-# README
+## このアプリについて
+HABのエンジニア勉強会で作成しているアプリです
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## バージョン
+```
+Ruby:           '3.2.2'
+Ruby on Rails:  '7.1.3'
+Nodejs:         '18.19.0'
+```
 
-Things you may want to cover:
+## 使用技術
+```
+ESBuild
+TailwindCSS
+```
 
-* Ruby version
+## 環境構築手順
+**1.Git Clone**  
+`git clone git@github.com:Seiya-Fukita/engineer_study_app.git`
 
-* System dependencies
+**2.ディレクトリ移動**  
+`cd enginner_study_app`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# engineer_study_app
+**3.setup**  
+`make setup`
