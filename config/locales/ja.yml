@@ -16,7 +16,7 @@ ja:
         birth_date: 生年月日
         biography: 自己紹介
         location: 所在地
-        website: リンク
+        website: ウェブサイト
   date:
     abbr_day_names:
     - 日
