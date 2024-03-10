@@ -4,10 +4,13 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
   web:
     environment:
       TZ: Asia/Tokyo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
     build:
       context: .
       dockerfile: Dockerfile.dev

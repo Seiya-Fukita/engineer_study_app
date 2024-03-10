@@ -51,7 +51,7 @@ jobs:
 
       - name: setup migrate
         env:
-          DATABASE_URL: postgres://postgres:password@db:5432/test
+          DATABASE_URL: postgres://postgres:password@localhost:5432/test
           REDIS_URL: redis://localhost:6379
           RAILS_ENV: test
         run: |
