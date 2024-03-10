@@ -6,6 +6,8 @@ services:
     environment:
       POSTGRES_PASSWORD: password
   web:
+    environment:
+      TZ: Asia/Tokyo
     build:
       context: .
       dockerfile: Dockerfile.dev
