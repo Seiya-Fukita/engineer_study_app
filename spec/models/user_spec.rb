@@ -12,9 +12,9 @@ RSpec.describe User, type: :model do
   describe "バリデーション" do
     subject { user.valid? }
 
-    let(:user) { build(:user, name:, username:, email:, birth_date:, website:) }
+    let(:user) { build(:user, name:, identification_name:, email:, birth_date:, website:) }
     let(:name) { Faker::Name.name }
-    let(:username) { Faker::Alphanumeric.unique.alpha(number: 10) }
+    let(:identification_name) { Faker::Alphanumeric.unique.alpha(number: 10) }
     let(:email) { Faker::Internet.unique.email }
     let(:birth_date) { Faker::Date.birthday }
     let(:website) { "http://example.com" }
@@ -29,7 +29,7 @@ RSpec.describe User, type: :model do
     end
 
     context "ユーザー名が空の場合" do
-      let(:username) { "" }
+      let(:identification_name) { "" }
 
       it "エラーメッセージが返る" do
         expect(subject).to be_falsy
