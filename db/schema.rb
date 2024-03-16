@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_09_155836) do
 
   create_table "users", force: :cascade do |t|
     t.string "name", null: false, comment: "ユーザー名"
-    t.string "username", null: false, comment: "@から始まる識別子"
+    t.string "identification_name", null: false, comment: "@から始まる識別子"
     t.string "email", null: false
     t.date "birth_date", null: false, comment: "生年月日"
     t.string "biography", comment: "自己紹介"
@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_09_155836) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
+    t.index ["identification_name"], name: "index_users_on_identification_name", unique: true
   end
 
 end
