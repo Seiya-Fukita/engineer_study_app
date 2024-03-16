@@ -22,11 +22,6 @@ jobs:
         image: redis
         ports: ["6379:6379"]
         options: --entrypoint redis-server
-      selenium_chrome:
-        image: seleniarm/standalone-chromium
-        ports:
-          - 4444:4444
-        options: --shm-size=2gb
 
     steps:
       - uses: actions/checkout@v4
