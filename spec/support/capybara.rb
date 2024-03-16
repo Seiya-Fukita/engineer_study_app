@@ -27,7 +27,7 @@ RSpec.configure do |config|
 
   # System Specのテスト実行前に実行される共通定義（jsフラグをtrueとする場合）
   config.before(:each, type: :system, js: true) do
-    if ENV['SELENIUM_DRIVER_URL']
+    if ENV["SELENIUM_DRIVER_URL"]
       driven_by :remote_chrome
       Capybara.server_host = IPSocket.getaddress(Socket.gethostname)
       Capybara.server_port = 4444
