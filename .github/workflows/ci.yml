@@ -54,6 +54,9 @@ jobs:
       - name: ERB Lint
         run: bundle exec erblint --lint-all
 
+      - name: Chrome Install
+        run: sudo apt-get install google-chrome-stable
+
       - name: Rspec
         env:
           DATABASE_URL: postgres://postgres:password@localhost:5432/test
