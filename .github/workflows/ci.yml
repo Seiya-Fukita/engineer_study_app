@@ -26,6 +26,7 @@ jobs:
         image: seleniarm/standalone-chromium
         ports:
           - 4444:4444
+        options: --shm-size=2gb
 
     steps:
       - uses: actions/checkout@v4
