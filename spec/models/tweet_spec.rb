@@ -5,7 +5,7 @@ RSpec.describe Tweet, type: :model do
     let(:tweet) { build(:tweet, content: content) }
 
     context "内容が140字以内の場合" do
-      let(:content) {"TEST"}
+      let(:content) { "TEST" }
 
       it "正常に作成できる" do
         expect(tweet).to be_valid
@@ -21,7 +21,7 @@ RSpec.describe Tweet, type: :model do
     end
 
     context "内容が空の場合" do
-      let(:content) {""}
+      let(:content) { "" }
       it "エラーメッセージが返る" do
         expect(tweet).to be_invalid
         expect(tweet.errors.full_messages).to eq ["内容を入力してください"]
