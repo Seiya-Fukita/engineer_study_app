@@ -8,6 +8,7 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
     models:
       user: ユーザー
+      tweet: ツイート
     attributes:
       user:
         name: 名前
@@ -17,6 +18,8 @@ ja:
         biography: 自己紹介
         location: 所在地
         website: ウェブサイト
+      tweet:
+        content: 内容
   date:
     abbr_day_names:
       - 日
