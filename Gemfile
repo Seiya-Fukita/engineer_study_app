@@ -13,6 +13,7 @@ gem "cssbundling-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[windows jruby]
 gem "bootsnap", require: false
+gem "image_processing"
 
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
