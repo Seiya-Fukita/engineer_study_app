@@ -12,12 +12,13 @@ RSpec.describe User, type: :model do
   describe "バリデーション" do
     subject { user.valid? }
 
-    let(:user) { build(:user, name:, identification_name:, email:, birth_date:, website:) }
+    let(:user) { build(:user, name:, identification_name:, email:, birth_date:, website:, password:) }
     let(:name) { Faker::Name.name }
     let(:identification_name) { Faker::Alphanumeric.unique.alpha(number: 10) }
     let(:email) { Faker::Internet.unique.email }
     let(:birth_date) { Faker::Date.birthday }
     let(:website) { "http://example.com" }
+    let(:password) { Faker::Internet.password }
 
     context "名前が空の場合" do
       let(:name) { "" }
@@ -61,6 +62,24 @@ RSpec.describe User, type: :model do
       it "エラーメッセージが返る" do
         expect(subject).to be_falsy
         expect(user.errors.full_messages).to eq ["ウェブサイトは不正な値です"]
+      end
+    end
+
+    context "不正なパスワードの設定" do
+      let(:password) { "a" * 5 }
+
+      it "エラーメッセージが返る" do
+        expect(subject).to be_falsy
+        expect(user.errors.full_messages).to eq ["パスワードは6文字以上で入力してください"]
+      end
+    end
+
+    context "不正なパスワードの設定" do
+      let(:password) { "" }
+
+      it "エラーメッセージが返る" do
+        expect(subject).to be_falsy
+        expect(user.errors.full_messages).to eq ["パスワードを入力してください", "パスワードは6文字以上で入力してください"]
       end
     end
   end

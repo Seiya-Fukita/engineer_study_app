@@ -18,6 +18,7 @@ ja:
         biography: 自己紹介
         location: 所在地
         website: ウェブサイト
+        password: パスワード
       tweet:
         content: 内容
   date:
