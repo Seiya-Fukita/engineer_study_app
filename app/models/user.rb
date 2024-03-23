@@ -10,7 +10,7 @@ class User < ApplicationRecord
     validates :birth_date
     validates :email, length: {maximum: 255}, uniqueness: true,
       format: {with: VALID_EMAIL_REGEX}
-    validates :password, length: { minimum: 6 }
+    validates :password, length: {minimum: 6}
   end
   validates :website, format: {with: VALID_URL_REGEX}, allow_blank: true
 
