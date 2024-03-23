@@ -1,6 +1,14 @@
 require "rails_helper"
 
 RSpec.describe Tweet, type: :model do
+  context "factoryデフォルト設定で作成した場合" do
+    let(:tweet) { create(:tweet) }
+
+    it "userを正常に作成できる" do
+      expect(tweet).to be_valid
+    end
+  end
+
   describe "バリデーション" do
     let(:tweet) { build(:tweet, content: content) }
 
