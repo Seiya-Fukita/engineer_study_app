@@ -14,6 +14,9 @@ build:
 up:
 	docker-compose -f compose-dev.yaml up
 
+up_d:
+	docker-compose -f compose-dev.yaml up -d
+
 down:
 	docker-compose -f compose-dev.yaml down
 
