@@ -11,6 +11,9 @@
   </head>
 
   <body>
+<%
+=begin
+%>
     <div class="grid grid-cols-12 h-screen ">
       <div class="col-span-2 md:col-span-3 border flex justify-end">
         <%= render "shared/leftbar" %>
@@ -23,5 +26,11 @@
         <%= render "shared/rightbar" %>
       </div>
     </div>
+<%
+=end
+%>
+    <main class="">
+      <%= yield %>
+    </main>
   </body>
 </html>

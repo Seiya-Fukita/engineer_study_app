@@ -1,1 +1,39 @@
-topページ
+<div class="container mx-auto py-[20px] lg:py-0 h-full">
+  <div class="h-screen flex flex-col lg:flex-row px-4 py-4 lg:py-0 lg:px-0 gap-16 lg:gap-0">
+    <div class="w-full">
+      <div class="h-full flex lg:justify-center lg:items-center">
+        <%= image_tag "logo-black.png", class: "w-10 h-10 max-w-[400px] lg:w-[100%] lg:h-[100%] object-contain" %>
+      </div>
+    </div>
+    <div class="flex items-center justify-between lg:px-4">
+      <div class="lg:min-w-[800px] lg:px-4 lg:py-8">
+        <div class="text-[40px] lg:text-[68px] font-bold">すべての話題が、ここに。</div>
+        <div class="flex flex-cols text-[23px] lg:text-[31px] font-bold mt-16">いますぐ参加しましょう</div>
+          <div>
+            <button class="flex justify-center items-center gap-2 mt-8 w-[300px] py-2 px-4 border border-slate-400 hover:bg-blue-50 hover:border-blue-200 rounded-full">
+              <%= image_tag "google.png", class: "w-6 h-6" %>
+              <div>Googleで登録</div>
+            </button>
+          </div>
+          <div>
+            <button class="flex justify-center items-center mt-2 w-[300px] py-2 px-4 font-bold border border-slate-400 hover:bg-gray-200 hover:border-gray-400 rounded-full">
+              <%= image_tag "apple.webp", class: "w-6 h-6" %>
+              <div>Appleのアカウントで登録</div>
+            </button>
+          </div>
+          <div class="mt-4 w-[300px] text-center relative after:content-[''] after:absolute after:right-0 after:top-[12px] before:bg-gray-200 before:w-[120px] before:h-[1px] before:content-[''] before:absolute before:left-0 before:top-[12px] after:bg-gray-200 after:w-[120px] after:h-[1px]">または</div>
+          <button class="mt-4 w-[300px] py-2 px-4 text-center font-bold text-white bg-blue-500 hover:bg-blue-700 rounded-full">
+            アカウントを作成
+          </button>
+          <div class="w-[300px] mt-2 text-xs text-gray-600">
+            アカウントを登録することにより、<span class="text-blue-500">利用規約</span>と<span class="text-blue-500">プライバシーポリシー</span>（<span class="text-blue-500">Cookieの使用</span>を含む）に同意したとみなされます。
+          </div>
+          <div class="mt-16 font-bold">アカウントをお持ちの方</div>
+          <button class="mt-4 w-[300px] py-2 px-4 text-center font-bold border border-slate-400 hover:bg-blue-50 text-blue-500 rounded-full">
+            ログイン
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
