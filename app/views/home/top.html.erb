@@ -22,9 +22,11 @@
             </button>
           </div>
           <div class="mt-4 w-[300px] text-center relative after:content-[''] after:absolute after:right-0 after:top-[12px] before:bg-gray-200 before:w-[120px] before:h-[1px] before:content-[''] before:absolute before:left-0 before:top-[12px] after:bg-gray-200 after:w-[120px] after:h-[1px]">または</div>
-          <button class="mt-4 w-[300px] py-2 px-4 text-center font-bold text-white bg-blue-500 hover:bg-blue-700 rounded-full">
-            アカウントを作成
-          </button>
+          <%= link_to new_user_path do %>
+            <button class="mt-4 w-[300px] py-2 px-4 text-center font-bold text-white bg-blue-500 hover:bg-blue-700 rounded-full">
+              アカウントを作成
+            </button>
+          <% end %>
           <div class="w-[300px] mt-2 text-xs text-gray-600">
             アカウントを登録することにより、<span class="text-blue-500">利用規約</span>と<span class="text-blue-500">プライバシーポリシー</span>（<span class="text-blue-500">Cookieの使用</span>を含む）に同意したとみなされます。
           </div>

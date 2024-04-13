@@ -1,0 +1,21 @@
+<div class="px-4">
+  <div class="font-bold text-2xl">
+    アカウントを作成
+  </div>
+  <div class="">
+    <%= form_with(model: @user, html: { class: "mx-auto" }) do |f| %>
+      <div class="mt-12">
+        <%= f.text_field :name, class: "border rounded w-full py-4 px-2 text-gray-700", placeholder: "名前" %>
+      </div>
+
+      <div class="mt-8">
+        <%= f.email_field :email, class: "border rounded w-full py-4 px-2 text-gray-700", placeholder: "メール" %>
+      </div>
+
+      <div class="mt-8">
+        <%= f.label :birth_date, class: "font-bold" %>
+      </div>
+      <%= f.submit "次へ", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
