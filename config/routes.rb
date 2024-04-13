@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "top" => "home#top"
-  get  "/signup",  to: "users#new"
+  get "/signup", to: "users#new"
 end
