@@ -1,0 +1,33 @@
+<div class="flex justify-center py-4">
+  <%= image_tag 'logo-black.png', class: "w-6 h-6" %>
+</div>
+<div class="px-4">
+  <div class="font-bold text-2xl">
+    アカウントを作成
+  </div>
+  <%= form_with(model: @user, html: { class: "mx-auto" }) do |f| %>
+    <div class="flex flex-col justify-between py-8 h-screen max-h-[calc(100vh-120px)]">
+      <div>
+        <div class="relative">
+          <%= f.text_field :name, class: "block rounded px-2.5 pb-2.5 pt-5 w-full border focus:outline-none focus:ring-0 focus:border-blue-400 focus:border-2 peer", placeholder: " " %>
+          <%= f.label :name, class: "absolute text-gray-500 duration-300 transform -translate-y-4 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4" %>
+        </div>
+
+        <div class="mt-8 relative">
+          <%= f.email_field :email, class: "block rounded px-2.5 pb-2.5 pt-5 w-full border focus:outline-none focus:ring-0 focus:border-blue-400 focus:border-2 peer", placeholder: " " %>
+          <%= f.label :email, class: "absolute text-gray-500 duration-300 transform -translate-y-4 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4" %>
+        </div>
+
+        <div class="mt-8">
+          <%= f.label :birth_date, class: "font-bold" %>
+          <p class="text-sm text-gray-500">この情報は公開されません。このアカウントをビジネス、ペットなどに使う場合でも、ご自身の年齢を確認してください。</p>
+          <%= f.date_field :birth_date, class: "mt-4 w-full rounded px-2.5 py-4 border focus:outline-none focus:ring-0 focus:border-blue-400 focus:border-2" %>
+        </div>
+      </div>
+
+      <div>
+        <%= f.submit "次へ", class: "w-full bg-black text-white font-bold py-3 rounded-full" %>
+      </div>
+    </div>
+  <% end %>
+</div>
