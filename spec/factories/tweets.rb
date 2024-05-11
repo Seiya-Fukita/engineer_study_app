@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :tweet do
     association :user
-    content { Faker::Content.content }
+    content { Faker::Lorem.paragraph }
   end
 end
