@@ -4,5 +4,5 @@
 
 import { application } from "./application"
 
-import { Dropdown } from "tailwindcss-stimulus-components"
-application.register('dropdown', Dropdown)
+import Users__SignupController from "./users/signup_controller"
+application.register("users--signup", Users__SignupController)
