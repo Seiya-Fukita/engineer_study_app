@@ -15,19 +15,11 @@ class Users::RegistrationsController < ApplicationController
 
   private
 
-  def default_identification_name
-    SecureRandom.hex(10)
-  end
-
-  def default_password
-    SecureRandom.hex(10)
-  end
-
   def user_params
     params.require(:user).permit(:name, :email, :birth_date)
   end
 
   def default_params
-    { identification_name: default_identification_name, password: default_password }
+    { identification_name: SecureRandom.hex(10), password: SecureRandom.hex(10) }
   end
 end
