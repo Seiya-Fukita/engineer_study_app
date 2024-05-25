@@ -8,6 +8,7 @@ class Users::RegistrationsController < ApplicationController
     @user = User.new(user_params.merge(default_params))
     if @user.save!
       @one_time_password = OneTimePassword.generate_password(@user)
+      UserMailer.with(user: @user, password: @one_time_password).welcome_email.deliver_later
       redirect_to confirmation_path
     else
       render :new, status: :unprocessable_entity
