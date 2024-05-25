@@ -1,8 +1,33 @@
 class Users::RegistrationsController < ApplicationController
+
   def new
+    @user = User.new
   end
 
   def create
-    redirect_to confirmation_path
+    @user = User.new(user_params.merge(default_params))
+    if @user.save!
+      redirect_to confirmation_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def default_identification_name
+    SecureRandom.hex(10)
+  end
+
+  def default_password
+    SecureRandom.hex(10)
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :email, :birth_date)
+  end
+
+  def default_params
+    { identification_name: default_identification_name, password: default_password }
   end
 end
