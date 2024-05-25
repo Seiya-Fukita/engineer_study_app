@@ -7,6 +7,7 @@ class Users::RegistrationsController < ApplicationController
   def create
     @user = User.new(user_params.merge(default_params))
     if @user.save!
+      @one_time_password = OneTimePassword.generate_password(@user)
       redirect_to confirmation_path
     else
       render :new, status: :unprocessable_entity
